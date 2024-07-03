@@ -1,0 +1,83 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+   
+    <div class="row offset-2 mt-2">
+        <h3>Create listing</h3>
+        <div class="col col-md-8">
+    <form  action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <lable for="title" class="form-lable">Title</lable>    
+            <input type="text" name="listing[title]" placeholder="Enter title" class="form-control" required>
+            <div class="invalid-feedback">
+             Enter your title
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <lable for="description" class="form-lable">Description</lable>
+            <textarea name="listing[description]" type="text" placeholder="Enter description" class="form-control" required ></textarea>
+            <div class="invalid-feedback">
+                Enter your description
+               </div>
+        </div>
+
+        <div class="mb-3">
+            <lable for="image" class="form-lable">Upload Listimg Image</lable> 
+            <input type="file" name="listing[image]" class="form-control" required>
+            <div class="invalid-feedback">
+                Enter your image
+               </div>
+          </div>
+
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <lable for="price" class="form-lable">Price</lable> 
+            <input   name="listing[price]" placeholder="800" class="form-control" required >
+            <div class="invalid-feedback">
+                Enter your valid price
+               </div>
+        </div>
+       
+        <div class="mb-3 col-md-8">
+            <lable for="country" class="form-lable">Country</lable> 
+            <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+            <div class="invalid-feedback">
+                Enter your country name
+               </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="mb-3 col-md-8">
+            <lable for="location" class="form-lable">Location</lable>
+            <input type="text" name="listing[location]" placeholder="Jaipur, Rajsthan" class="form-control" required>
+            <div class="invalid-feedback">
+                Enter your location
+               </div>
+        </div>
+
+        <div class="mb-3 col-md-4">
+            <lable for="category" class="form-lable">Category</lable>
+            <select name="listing[category]" id="category" class="form-control" required>
+                <option value="Mountains">Mountains</option>
+                <option value="Camping">Camping</option>
+                <option value="Beach">Beach</option>
+                <option value="Deserts">Deserts</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Farms">Farms</option>
+                <option value="Pools">Pools</option>
+            </select>
+            <div class="invalid-feedback">
+                Select your category
+               </div>
+        </div>
+    </div>
+       
+       
+        <button class="btn btn-dark btn-add mt-3">Add</button> 
+    </form>
+</div>
+</div>
+    <br><br>
+    
+</body>
