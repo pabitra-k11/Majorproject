@@ -1,157 +1,165 @@
-
 <% layout('/layouts/boilerplate') %>
-<style>
-    #filters{
-        display: flex;
-        flex-wrap: wrap;
-       background-color: white;
-       
-    }
-    .filter{
-        text-align: center;
-        margin-right: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        opacity: 0.7;
-    }
-    .filter:hover{
-        opacity: 1;
-        cursor: pointer;
-      
-    }
-     .filter p{
-        font-size: 0.8rem;
-    }
-   /* .filter i{
+    <style>
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+
+        }
+
+        .filter p {
+            font-size: 0.8rem;
+        }
+
+        /* .filter i{
         font-size: 1.5rem;
     } */
-    .tax-info{
-        display: none;
-    }
-    .tax-toggle{
-        height: 3.5rem;
-        padding: 1rem;
-        border: 2px solid black;
-        border-radius: 1rem;
-        display: flex;
-        text-align: center;
-        margin-left: 1rem;
-        margin-top: 1.8rem;
-        
-    }
+        .tax-info {
+            display: none;
+        }
 
-</style>
-<body>
-  
-<div id="filters">
-    
-    <div class="filter" data-category="Trending">
-       <div><i class="fa-solid fa-fire"></i> </div> 
-       <p>Trending</p>
-   </div>
+        .tax-toggle {
+            height: 3.5rem;
+            padding: 1rem;
+            border: 2px solid black;
+            border-radius: 1rem;
+            display: flex;
+            text-align: center;
+            margin-left: 1rem;
+            margin-top: 1.8rem;
 
-<div class="filter" data-category="Rooms">
-    <div><i class="fa-solid fa-bed"></i> </div> 
-    <p>Rooms</p>
-</div>
-<div class="filter" data-category="Iconic cities">
-    <div><i class="fa-solid fa-mountain-city"></i></i> </div> 
-    <p>Iconic cities</p>
-</div>
+        }
+    </style>
 
-<div class="filter" data-category="Mountains">
-    <div><i class="fa-solid fa-mountain-sun"></i> </div> 
-    <p>Mountains</p>
-</div>
-<div class="filter" data-category="Castels">
-    <div><i class="fa-brands fa-fort-awesome"></i> </div> 
-    <p>Castels</p>
-</div>
-<div class="filter" data-category="Pools">
-    <div><i class="fa-solid fa-person-swimming"></i> </div> 
-    <p>Amazing pools</p>
-</div>
+    <body>
 
-<div class="filter" data-category="Camping">
-    <div><i class="fa-solid fa-campground"></i></div> 
-    <p>Camping</p>
-</div>
+        <div id="filters col-md-5">
 
+            <div class="filter" data-category="Trending">
+                <div><i class="fa-solid fa-fire"></i> </div>
+                <p>Trending</p>
+            </div>
 
-<div class="filter" data-category="Farms">
-    <div><i class="fa-solid fa-cow"></i></div> 
-    <p>Farms</p>
-</div>
+            <div class="filter" data-category="Rooms">
+                <div><i class="fa-solid fa-bed"></i> </div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter" data-category="Iconic cities">
+                <div><i class="fa-solid fa-mountain-city"></i></i> </div>
+                <p>Iconic cities</p>
+            </div>
 
-<div class="filter" data-category="Atricts">
-    <div><i class="fa-brands fa-galactic-republic"></i></div> 
-    <p>Atricts</p>
-</div>
+            <div class="filter" data-category="Mountains">
+                <div><i class="fa-solid fa-mountain-sun"></i> </div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter" data-category="Castels">
+                <div><i class="fa-brands fa-fort-awesome"></i> </div>
+                <p>Castels</p>
+            </div>
+            <div class="filter" data-category="Pools">
+                <div><i class="fa-solid fa-person-swimming"></i> </div>
+                <p>Amazing pools</p>
+            </div>
 
-<div class="filter" data-category="Beach">
-    <div><i class="fa-solid fa-umbrella-beach"></i></div> 
-    <p>Beach</p>
-</div>
+            <div class="filter" data-category="Camping">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
 
 
-    <div class="tax-toggle">
+            <div class="filter" data-category="Farms">
+                <div><i class="fa-solid fa-cow"></i></div>
+                <p>Farms</p>
+            </div>
 
-        <div class="form-check-reverse form-switch">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-           
+            <div class="filter" data-category="Atricts">
+                <div><i class="fa-brands fa-galactic-republic"></i></div>
+                <p>Atricts</p>
+            </div>
+
+            <div class="filter" data-category="Beach">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beach</p>
+            </div>
+
+
+            <div class="tax-toggle">
+
+                <div class="form-check-reverse form-switch">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+
+                </div>
+            </div>
+
+
         </div>
-    </div>
-
-
-</div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-    <% for(let listing of allListing){%>
-       <a href="/listings/<%= listing._id %>" class="card-link"> 
-       <div class="card col listing-card" >
-        <img src=<%= listing.image.url %> class="card-img-top " style="height: 20rem;" alt="listing-image">
-        <div class="card-img-overlay"></div>
-        <div class="card-body">
-          <b><p class="card-text"><%= listing.title %></b><br/>
-            &#8377;<%= listing.price.toLocaleString('en-IN') %>/night
-            <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
-         </p>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for(let listing of allListing){%>
+                <a href="/listings/<%= listing._id %>" class="card-link">
+                    <div class="card col listing-card">
+                        <img src=<%=listing.image.url %> class="card-img-top " style="height: 20rem;"
+                        alt="listing-image">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <b>
+                                <p class="card-text">
+                                    <%= listing.title %>
+                            </b><br />
+                            &#8377;<%= listing.price.toLocaleString('en-IN') %>/night
+                                <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
+                                </p>
+                        </div>
+                    </div>
+                </a>
+                <% }%>
         </div>
-    </div>
-</a>
-      <% }%>  
- </div> 
-</body>
+    </body>
 
-<script>
+    <script>
 
-document.querySelectorAll('.filter').forEach(filter => {
-        filter.addEventListener('click', () => {
-            const category = filter.getAttribute('data-category');
-            window.location.href = `/listings/filter/${category}`;
+        document.querySelectorAll('.filter').forEach(filter => {
+            filter.addEventListener('click', () => {
+                const category = filter.getAttribute('data-category');
+                window.location.href = `/listings/filter/${category}`;
+            });
         });
-    });
 
-    let taxSwitch=document.getElementById("flexSwitchCheckDefault");
-    taxSwitch.addEventListener("click",()=>{
-       let taxInfo=document.getElementsByClassName("tax-info");
-       for(info of taxInfo){
-         if(info.style.display ==="inline"){
-           
-            info.style.display="none";
-         }else{
-            info.style.display="inline";
-         }
+        let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+        taxSwitch.addEventListener("click", () => {
+            let taxInfo = document.getElementsByClassName("tax-info");
+            for (info of taxInfo) {
+                if (info.style.display === "inline") {
 
-       
-       }
-    });
+                    info.style.display = "none";
+                } else {
+                    info.style.display = "inline";
+                }
 
 
-    document.querySelectorAll('.filter').forEach(filter => {
-        filter.addEventListener('click', () => {
-            const category = filter.getAttribute('data-category');
-            window.location.href = `/listings/filter/${category}`;
+            }
         });
-    });
-</script>
+
+
+        document.querySelectorAll('.filter').forEach(filter => {
+            filter.addEventListener('click', () => {
+                const category = filter.getAttribute('data-category');
+                window.location.href = `/listings/filter/${category}`;
+            });
+        });
+    </script>
