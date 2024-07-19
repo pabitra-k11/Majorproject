@@ -24,7 +24,7 @@ module.exports.filter = async (req, res) => {
     }
 };
 
-module.exports.countryByFilter= async (req, res,next)=>{
+module.exports.countryByFilter= async (req, res)=>{
     try {
         const { country } = req.params;
 
@@ -36,7 +36,7 @@ module.exports.countryByFilter= async (req, res,next)=>{
         res.render('./listings/index.ejs', { allListing });
     } catch (error) {
         console.error("Error searching listings by country:", error);
-        next(error);
+        res.status(500).send("Internal Server Error");
     }
 };
 
