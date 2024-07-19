@@ -15,6 +15,7 @@ router.route("/").get(wrapAsync(listingController.index))
 .post( upload.single('listing[image]'),validateListing,wrapAsync(listingController.createListingRoute));
 
 router.get('/filter/:category',listingController.filter);
+router.get('/search',listingController.countryByFilter);
 
 //new router
 router.get("/new",isLoggedIn,listingController.newFormRoute);
