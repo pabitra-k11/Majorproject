@@ -32,7 +32,7 @@ module.exports.countryByFilter= async (req, res)=>{
             req.flash("error","please enter a country to search");
             res.redirect("/listings");
         }
-        const allListing = await Listing.find({ country :new RegExp(country,i)});
+        const allListing = await Listing.find({ country});
         res.render('./listings/index.ejs', { allListing });
     } catch (error) {
         console.error("Error searching listings by country:", error);
