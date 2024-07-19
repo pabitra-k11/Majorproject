@@ -47,8 +47,8 @@
 
     <body>
 
-     <div id="filters row">
-         <div class="col col-md-2">
+        <div id="filters">
+
             <div class="filter" data-category="Trending">
                 <div><i class="fa-solid fa-fire"></i> </div>
                 <p>Trending</p>
@@ -106,9 +106,9 @@
 
                 </div>
             </div>
-        </div>
 
-     </div>
+
+        </div>
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
             <% for(let listing of allListing){%>
                 <a href="/listings/<%= listing._id %>" class="card-link">
