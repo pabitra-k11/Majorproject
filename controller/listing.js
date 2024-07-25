@@ -26,8 +26,8 @@ module.exports.filter = async (req, res) => {
 
 module.exports.countryByFilter= async (req, res,next)=>{
     try {
-        const { country } = req.params;
-
+        const  country  = req.query.country;
+        
         if(!country){
             req.flash("error","please enter a country to search");
             res.redirect("/listings");
