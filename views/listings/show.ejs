@@ -24,11 +24,11 @@
         </div>
     </div>
 
-  <% if(listing.owner){ %>
+   <% if(listing.currUser){ %>
 
 
     
-    <div class="btns ">
+  <div class="btns ">
         <div class="row">
             <div class="col-3 ">
                 <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark btn-edit  " style="width: 6rem;">Edit</a>
@@ -40,10 +40,11 @@
         <form action="/listings/<%= listing._id %>/?_method=DELETE" method="post">
             <button class="btn btn-dark ">Delete</button>
         </form>
+       </div>
     </div>
-   </div>
-   <% } %>
-</div>
+  
+ </div>
+      <% } %>
 </div>
 <div class="col-md-8 offset-3 mt-2">
  
